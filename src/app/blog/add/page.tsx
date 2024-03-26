@@ -1,12 +1,5 @@
-import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
-
-const EditorComp = dynamic(() => import('@/components/Editor'), { ssr: false })
+import AddNewPostForm from '@/components/AddNewPostForm'
 
 export default function AddBlogPost() {
-  return (
-    <Suspense fallback={null}>
-      <EditorComp />
-    </Suspense>
-  )
+  return <AddNewPostForm />
 }
